@@ -1,0 +1,590 @@
+:root {
+  /* Colors */
+  --color-primary: #FFD700;
+  /* Vibrant Yellow/Gold - Fun and Creative */
+  --color-secondary: #00A8FF;
+  /* Bright Blue - Digital/Sky */
+  --color-accent: #FF4757;
+  /* Energetic Red */
+  --color-text: #2f3542;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f1f2f6;
+  --color-border: #dfe4ea;
+  --font-base: 'Noto Sans JP', sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+}
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-base);
+  color: var(--color-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-color: var(--color-bg);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utilities */
+.section {
+  padding: 80px 20px;
+}
+
+.section__container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section__title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  line-height: 1.2;
+  position: relative;
+  display: inline-block;
+}
+
+.section__title--center {
+  display: block;
+  text-align: center;
+}
+
+.section__title-ja {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #888;
+  margin-top: 5px;
+  font-family: var(--font-base);
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid transparent;
+  font-family: var(--font-base);
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: #000;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+}
+
+.btn--primary:hover {
+  background-color: #ffe033;
+  transform: translateY(-2px);
+}
+
+.btn--outline {
+  border-color: var(--color-text);
+  color: var(--color-text);
+}
+
+.btn--outline:hover {
+  background-color: var(--color-text);
+  color: #fff;
+}
+
+.btn--white {
+  background-color: #fff;
+  color: var(--color-text);
+}
+
+.btn--white:hover {
+  background-color: #f0f0f0;
+}
+
+.btn--large {
+  padding: 15px 40px;
+  font-size: 1.1rem;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  /* PAONの基本サイズ */
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  position: relative;
+  z-index: 1001;
+  /* メニューより上に表示 */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header__logo-small {
+  font-size: 0.9rem;
+  /* ART LABのサイズ */
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-text);
+  margin-top: 4px;
+  /* 視覚調整 */
+}
+
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Formally define menu button */
+.header__menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 30px;
+  height: 20px;
+  position: relative;
+  z-index: 1001;
+}
+
+.header__menu-btn span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-text);
+  position: absolute;
+  left: 0;
+  transition: all 0.3s;
+}
+
+.header__menu-btn span:nth-child(1) {
+  top: 0;
+}
+
+.header__menu-btn span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header__menu-btn span:nth-child(3) {
+  bottom: 0;
+}
+
+/* Menu Active State */
+.header__menu-btn.is-active span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.header__menu-btn.is-active span:nth-child(2) {
+  opacity: 0;
+}
+
+.header__menu-btn.is-active span:nth-child(3) {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .header__menu-btn {
+    display: block;
+  }
+
+  .header__nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.98);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+
+  /* JS toggles display:block. We assume JS works, but we override specific styles when visible */
+  .header__nav[style*="display: block"] {
+    opacity: 1;
+    visibility: visible;
+    display: flex !important;
+  }
+
+  .header__nav-list {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .header__nav-list a {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  /* Full screen height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #fff;
+  /* Text needs to be white on dark/colorful image */
+}
+
+/* Background Image Overlay */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  /* Darken for text readability */
+  z-index: 1;
+}
+
+/* The actual image handled via CSS for ease of full cover */
+.hero__visual {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  margin: 0;
+  max-width: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  padding: 0 20px;
+  text-align: center;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero__title {
+  font-size: 4rem;
+  /* Impactful size */
+  font-weight: 900;
+  margin-bottom: 20px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.hero__title-sub {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  /* Use primary color for accent */
+  font-weight: 700;
+  display: block;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero__desc {
+  font-size: 1.2rem;
+  color: #f1f2f6;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 2.8rem;
+  }
+
+  .hero__title-sub {
+    font-size: 1.2rem;
+  }
+}
+
+/* Concept */
+.concept__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.concept__image img {
+  border-radius: 20px;
+  box-shadow: 20px 20px 0 var(--color-primary);
+}
+
+.concept__lead {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  .concept__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* Course */
+.course {
+  background-color: var(--color-bg-alt);
+}
+
+.course__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.course__card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.course__card:hover {
+  transform: translateY(-5px);
+}
+
+.course__name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--color-text);
+  border-bottom: 2px solid var(--color-primary);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.course__target {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.course__desc {
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  min-height: 60px;
+  /* visual alignment */
+}
+
+.course__price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+  text-align: right;
+}
+
+.course__note {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Instructor */
+.instructor__content {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid var(--color-border);
+}
+
+.instructor__image-wrapper {
+  flex: 0 0 300px;
+}
+
+.instructor__image {
+  width: 100%;
+  border-radius: 50%;
+  border: 5px solid var(--color-bg-alt);
+}
+
+.instructor__name {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+
+.instructor__name-en {
+  font-size: 1rem;
+  color: #888;
+  font-weight: 400;
+  margin-left: 10px;
+  font-family: var(--font-heading);
+}
+
+.instructor__job {
+  font-size: 1rem;
+  color: var(--color-secondary);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.instructor__desc {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .instructor__content {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .instructor__image-wrapper {
+    flex: 0 0 auto;
+    width: 200px;
+  }
+}
+
+/* Contact */
+.contact {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #ffed4a 100%);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.contact__title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.contact__text {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+/* Footer */
+.footer {
+  background-color: #2f3542;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer__copyright {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* Access */
+.access {
+  background-color: #fff;
+}
+
+.access__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.access__info {
+  text-align: center;
+}
+
+.access__address {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+/* Scroll Animations */
+.js-fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.js-fade-up.is-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered delay for grid items */
+.js-fade-up-stagger {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.js-fade-up-stagger.is-active {
+  opacity: 1;
+  transform: translateY(0);
+}
