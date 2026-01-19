@@ -166,16 +166,12 @@ img {
   align-items: center;
   height: 80px;
   /* Logo height significantly increased */
-  overflow: hidden;
-  /* Trim overflow if scaled */
 }
 
 .header__logo-img {
   height: 100%;
   width: auto;
   max-height: 100%;
-  transform: scale(1.4);
-  /* Zoom to remove whitespace */
 }
 
 /* ... (omitted) ... */
