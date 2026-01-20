@@ -48,4 +48,62 @@ document.addEventListener('DOMContentLoaded', () => {
     // Target elements
     const fadeElements = document.querySelectorAll('.js-fade-up, .js-fade-up-stagger');
     fadeElements.forEach(el => observer.observe(el));
+
+    // Gallery Filtering
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery__item');
+
+    if (filterBtns.length > 0) {
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.classList.remove('hide');
+                        // Reset animation slightly to re-trigger if needed, or simply show
+                        item.style.opacity = '1'; 
+                        item.style.transform = 'scale(1)';
+                    } else {
+                        item.classList.add('hide');
+                    }
+                });
+            });
+        });
+    }
+
+    // Modal (Lightbox)
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImg');
+    const closeBtn = document.querySelector('.modal__close');
+
+    if (modal && modalImg) {
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const img = item.querySelector('img');
+                if (img) {
+                    modal.style.display = 'block';
+                    modalImg.src = img.src;
+                }
+            });
+        });
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+        }
+
+        // Close on outside click
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    }
 });
