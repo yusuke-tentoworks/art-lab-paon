@@ -2,189 +2,242 @@
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="./assets/images/logo_paon_v2.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ART GALLERY | ART LAB PAON</title>
-    <meta name="description" content="ART LAB PAONの作品ギャラリー。生徒作品や講師のアートワークを紹介。" />
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/png" href="./assets/images/logo_paon_v2.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ART GALLERY | ART LAB PAON</title>
+        <meta name="description" content="ART LAB PAONの作品ギャラリー。生徒作品や講師のアートワークを紹介。" />
 
-    <!-- OGP Meta Tags -->
-    <meta property="og:title" content="ART GALLERY | ART LAB PAON" />
-    <meta property="og:description" content="ART LAB PAONの作品ギャラリー。生徒作品や講師のアートワークを紹介。" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://paon-art-lab.com/gallery.html" />
-    <meta property="og:image" content="https://paon-art-lab.com/assets/images/concept_art_color.jpg" />
-    <meta property="og:site_name" content="ART LAB PAON" />
+        <!-- OGP Meta Tags -->
+        <meta property="og:title" content="ART GALLERY | ART LAB PAON" />
+        <meta property="og:description" content="ART LAB PAONの作品ギャラリー。生徒作品や講師のアートワークを紹介。" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://paon-art-lab.com/gallery.html" />
+        <meta property="og:image" content="https://paon-art-lab.com/assets/images/concept_art_color.jpg" />
+        <meta property="og:site_name" content="ART LAB PAON" />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap"
-        rel="stylesheet">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+                rel="stylesheet">
 
-    <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
 <body id="gallery">
-    <!-- Header -->
-    <header class="header">
-        <div class="header__container">
-            <a href="index.html#top" class="header__logo">
-                <img src="./assets/images/logo_paon_v2.png" alt="ART LAB PAON Logo" class="header__logo-img">
-            </a>
-            <nav class="header__nav">
-                <ul class="header__nav-list">
-                    <li><a href="index.html#concept">CONCEPT</a></li>
-                    <li><a href="index.html#course">COURSE</a></li>
-                    <li><a href="index.html#instructor">INSTRUCTOR</a></li>
-                    <li><a href="index.html#access">ACCESS</a></li>
-                    <li><a href="gallery.html" class="active">GALLERY</a></li>
-                </ul>
-            </nav>
-            <button class="header__menu-btn" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </header>
-
-    <main>
-        <section class="gallery">
-            <div class="section__container">
-                <h2 class="section__title section__title--center">ART GALLERY<span class="section__title-ja">作品紹介</span>
-                </h2>
-
-                <!-- Filter Buttons -->
-                <div class="gallery__filter">
-                    <button class="filter-btn active" data-filter="all">ALL</button>
-                    <button class="filter-btn" data-filter="zoukei">造形絵画</button>
-                    <button class="filter-btn" data-filter="digital">デジタルイラスト</button>
-                    <button class="filter-btn" data-filter="ipad">iPad</button>
-                    <button class="filter-btn" data-filter="acrylic">大人アクリル</button>
+        <!-- Top Anchor -->
+        <div id="top"></div>
+        <!-- Loader -->
+        <div id="loader" class="loader">
+                <div class="loader__content">
+                        <img src="./assets/images/logo_paon_v2.png" alt="Loading..." class="loader__logo">
                 </div>
-
-                <!-- Gallery Grid -->
-                <div class="gallery__grid">
-                    <!-- 造形絵画 (zoukei): 13 items -->
-                    <div class="gallery__item" data-category="zoukei"><img
-                            src="./assets/images/gallery/Artistic-Painting-Course/Artistic-Painting-Course1.jpeg"
-                            alt="造形絵画作品 1"></div>
-                    <div class="gallery__item" data-category="zoukei"><img
-                            src="./assets/images/gallery/Artistic-Painting-Course/Artistic-Painting-Course2.jpeg"
-                            alt="造形絵画作品 2"></div>
-                    <div class="gallery__item" data-category="zoukei"><img
-                            src="./assets/images/gallery/Artistic-Painting-Course/Artistic-Painting-Course3.jpeg"
-                            alt="造形絵画作品 3"></div>
-                    <div class="gallery__item" data-category="zoukei"><img
-                            src="./assets/images/gallery/Artistic-Painting-Course/Artistic-Painting-Course4.jpeg"
-                            alt="造形絵画作品 4"></div>
-                    <div class="gallery__item" data-category="zoukei"><img
-                            src="./assets/images/gallery/Artistic-Painting-Course/Artistic-Painting-Course5.jpeg"
-                            alt="造形絵画作品 5"></div>
-                    <div class="gallery__item" data-category="zoukei"><img
-                            src="./assets/images/gallery/Artistic-Painting-Course/Artistic-Painting-Course6.jpeg"
-                            alt="造形絵画作品 6"></div>
-                    <div class="gallery__item" data-category="zoukei"><img
-                            src="./assets/images/gallery/Artistic-Painting-Course/Artistic-Painting-Course7.jpeg"
-                            alt="造形絵画作品 7"></div>
-                    <div class="gallery__item" data-category="zoukei"><img
-                            src="./assets/images/gallery/Artistic-Painting-Course/Artistic-Painting-Course8.jpeg"
-                            alt="造形絵画作品 8"></div>
-                    <div class="gallery__item" data-category="zoukei"><img
-                            src="./assets/images/gallery/Artistic-Painting-Course/Artistic-Painting-Course9.jpeg"
-                            alt="造形絵画作品 9"></div>
-                    <div class="gallery__item" data-category="zoukei"><img
-                            src="./assets/images/gallery/Artistic-Painting-Course/Artistic-Painting-Course10.jpeg"
-                            alt="造形絵画作品 10"></div>
-                    <div class="gallery__item" data-category="zoukei"><img
-                            src="./assets/images/gallery/Artistic-Painting-Course/Artistic-Painting-Course11.jpeg"
-                            alt="造形絵画作品 11"></div>
-                    <div class="gallery__item" data-category="zoukei"><img
-                            src="./assets/images/gallery/Artistic-Painting-Course/Artistic-Painting-Course12.jpeg"
-                            alt="造形絵画作品 12"></div>
-                    <div class="gallery__item" data-category="zoukei"><img
-                            src="./assets/images/gallery/Artistic-Painting-Course/Artistic-Painting-Course13.jpeg"
-                            alt="造形絵画作品 13"></div>
-
-                    <!-- デジタルイラスト (digital): 11 items -->
-                    <div class="gallery__item" data-category="digital"><img
-                            src="./assets/images/gallery/Digital-Illustration-Course/Digital-Illustration-Course1.jpeg"
-                            alt="デジタルイラスト作品 1"></div>
-                    <div class="gallery__item" data-category="digital"><img
-                            src="./assets/images/gallery/Digital-Illustration-Course/Digital-Illustration-Course2.jpeg"
-                            alt="デジタルイラスト作品 2"></div>
-                    <div class="gallery__item" data-category="digital"><img
-                            src="./assets/images/gallery/Digital-Illustration-Course/Digital-Illustration-Course3.jpeg"
-                            alt="デジタルイラスト作品 3"></div>
-                    <div class="gallery__item" data-category="digital"><img
-                            src="./assets/images/gallery/Digital-Illustration-Course/Digital-Illustration-Course4.jpeg"
-                            alt="デジタルイラスト作品 4"></div>
-                    <div class="gallery__item" data-category="digital"><img
-                            src="./assets/images/gallery/Digital-Illustration-Course/Digital-Illustration-Course5.jpeg"
-                            alt="デジタルイラスト作品 5"></div>
-                    <div class="gallery__item" data-category="digital"><img
-                            src="./assets/images/gallery/Digital-Illustration-Course/Digital-Illustration-Course6.png"
-                            alt="デジタルイラスト作品 6"></div>
-                    <div class="gallery__item" data-category="digital"><img
-                            src="./assets/images/gallery/Digital-Illustration-Course/Digital-Illustration-Course7.png"
-                            alt="デジタルイラスト作品 7"></div>
-                    <div class="gallery__item" data-category="digital"><img
-                            src="./assets/images/gallery/Digital-Illustration-Course/Digital-Illustration-Course8.jpeg"
-                            alt="デジタルイラスト作品 8"></div>
-                    <div class="gallery__item" data-category="digital"><img
-                            src="./assets/images/gallery/Digital-Illustration-Course/Digital-Illustration-Course9.jpeg"
-                            alt="デジタルイラスト作品 9"></div>
-                    <div class="gallery__item" data-category="digital"><img
-                            src="./assets/images/gallery/Digital-Illustration-Course/Digital-Illustration-Course10.jpeg"
-                            alt="デジタルイラスト作品 10"></div>
-                    <div class="gallery__item" data-category="digital"><img
-                            src="./assets/images/gallery/Digital-Illustration-Course/Digital-Illustration-Course11.jpeg"
-                            alt="デジタルイラスト作品 11"></div>
-
-                    <!-- iPad (ipad): 7 items -->
-                    <div class="gallery__item" data-category="ipad"><img
-                            src="./assets/images/gallery/iPad-Course/iPad-Course1.png" alt="iPad作品 1"></div>
-                    <div class="gallery__item" data-category="ipad"><img
-                            src="./assets/images/gallery/iPad-Course/iPad-Course2.jpeg" alt="iPad作品 2"></div>
-                    <div class="gallery__item" data-category="ipad"><img
-                            src="./assets/images/gallery/iPad-Course/iPad-Course3.jpeg" alt="iPad作品 3"></div>
-                    <div class="gallery__item" data-category="ipad"><img
-                            src="./assets/images/gallery/iPad-Course/iPad-Course4.jpeg" alt="iPad作品 4"></div>
-                    <div class="gallery__item" data-category="ipad"><img
-                            src="./assets/images/gallery/iPad-Course/iPad-Course5.jpeg" alt="iPad作品 5"></div>
-                    <div class="gallery__item" data-category="ipad"><img
-                            src="./assets/images/gallery/iPad-Course/iPad-Course6.jpeg" alt="iPad作品 6"></div>
-                    <div class="gallery__item" data-category="ipad"><img
-                            src="./assets/images/gallery/iPad-Course/iPad-Course7.jpeg" alt="iPad作品 7"></div>
-
-                    <!-- 大人アクリル (acrylic): 2 items -->
-                    <div class="gallery__item" data-category="acrylic"><img
-                            src="./assets/images/gallery/Adult-Acrylic-Painting-Course/Adult-Acrylic-Painting-Course1.jpeg"
-                            alt="大人アクリル作品 1"></div>
-                    <div class="gallery__item" data-category="acrylic"><img
-                            src="./assets/images/gallery/Adult-Acrylic-Painting-Course/Adult-Acrylic-Painting-Course2.jpeg"
-                            alt="大人アクリル作品 2"></div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Image Modal -->
-    <div class="modal" id="imageModal">
-        <span class="modal__close">&times;</span>
-        <img class="modal__content" id="modalImg">
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="section__container">
-            <p class="footer__copyright">&copy; 2025 ART LAB PAON. All Rights Reserved.</p>
         </div>
-    </footer>
 
-    <script src="./assets/js/main.js"></script>
+        <!-- Header -->
+        <header class="header">
+                <div class="header__container">
+                        <a href="index.html#top" class="header__logo">
+                                <img src="./assets/images/logo_paon_v2.png" alt="ART LAB PAON Logo"
+                                        class="header__logo-img">
+                        </a>
+                        <nav class="header__nav">
+                                <ul class="header__nav-list">
+                                        <li><a href="index.html#concept">CONCEPT</a></li>
+                                        <li><a href="index.html#course">COURSE</a></li>
+                                        <li><a href="index.html#instructor">INSTRUCTOR</a></li>
+                                        <li><a href="index.html#access">ACCESS</a></li>
+                                        <li><a href="gallery.html" class="active">GALLERY</a></li>
+                                </ul>
+                        </nav>
+                        <button class="header__menu-btn" aria-label="Menu">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                        </button>
+                </div>
+        </header>
+
+        <main>
+                <section class="gallery">
+                        <div class="section__container">
+                                <h2 class="section__title section__title--center">ART GALLERY<span
+                                                class="section__title-ja">作品紹介</span>
+                                </h2>
+
+                                <!-- Filter Buttons -->
+                                <div class="gallery__filter">
+                                        <button class="filter-btn active" data-filter="all">ALL</button>
+                                        <button class="filter-btn" data-filter="zoukei">造形絵画</button>
+                                        <button class="filter-btn" data-filter="digital">デジタルイラスト</button>
+                                        <button class="filter-btn" data-filter="ipad">iPad</button>
+                                        <button class="filter-btn" data-filter="acrylic">大人アクリル</button>
+                                </div>
+
+                                <!-- Gallery Grid -->
+                                <div class="gallery__grid">
+                                        <!-- 造形絵画 (zoukei): 13 items -->
+                                        <div class="gallery__item" data-category="zoukei"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/Artistic-Painting-Course/Artistic-Painting-Course1.jpeg"
+                                                        alt="造形絵画作品 1"></div>
+                                        <div class="gallery__item" data-category="zoukei"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/Artistic-Painting-Course/Artistic-Painting-Course2.jpeg"
+                                                        alt="造形絵画作品 2"></div>
+                                        <div class="gallery__item" data-category="zoukei"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/Artistic-Painting-Course/Artistic-Painting-Course3.jpeg"
+                                                        alt="造形絵画作品 3"></div>
+                                        <div class="gallery__item" data-category="zoukei"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/Artistic-Painting-Course/Artistic-Painting-Course4.jpeg"
+                                                        alt="造形絵画作品 4"></div>
+                                        <div class="gallery__item" data-category="zoukei"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/Artistic-Painting-Course/Artistic-Painting-Course5.jpeg"
+                                                        alt="造形絵画作品 5"></div>
+                                        <div class="gallery__item" data-category="zoukei"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/Artistic-Painting-Course/Artistic-Painting-Course6.jpeg"
+                                                        alt="造形絵画作品 6"></div>
+                                        <div class="gallery__item" data-category="zoukei"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/Artistic-Painting-Course/Artistic-Painting-Course7.jpeg"
+                                                        alt="造形絵画作品 7"></div>
+                                        <div class="gallery__item" data-category="zoukei"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/Artistic-Painting-Course/Artistic-Painting-Course8.jpeg"
+                                                        alt="造形絵画作品 8"></div>
+                                        <div class="gallery__item" data-category="zoukei"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/Artistic-Painting-Course/Artistic-Painting-Course9.jpeg"
+                                                        alt="造形絵画作品 9"></div>
+                                        <div class="gallery__item" data-category="zoukei"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/Artistic-Painting-Course/Artistic-Painting-Course10.jpeg"
+                                                        alt="造形絵画作品 10"></div>
+                                        <div class="gallery__item" data-category="zoukei"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/Artistic-Painting-Course/Artistic-Painting-Course11.jpeg"
+                                                        alt="造形絵画作品 11"></div>
+                                        <div class="gallery__item" data-category="zoukei"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/Artistic-Painting-Course/Artistic-Painting-Course12.jpeg"
+                                                        alt="造形絵画作品 12"></div>
+                                        <div class="gallery__item" data-category="zoukei"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/Artistic-Painting-Course/Artistic-Painting-Course13.jpeg"
+                                                        alt="造形絵画作品 13"></div>
+
+                                        <!-- デジタルイラスト (digital): 11 items -->
+                                        <div class="gallery__item" data-category="digital"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/Digital-Illustration-Course/Digital-Illustration-Course1.jpeg"
+                                                        alt="デジタルイラスト作品 1"></div>
+                                        <div class="gallery__item" data-category="digital"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/Digital-Illustration-Course/Digital-Illustration-Course2.jpeg"
+                                                        alt="デジタルイラスト作品 2"></div>
+                                        <div class="gallery__item" data-category="digital"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/Digital-Illustration-Course/Digital-Illustration-Course3.jpeg"
+                                                        alt="デジタルイラスト作品 3"></div>
+                                        <div class="gallery__item" data-category="digital"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/Digital-Illustration-Course/Digital-Illustration-Course4.jpeg"
+                                                        alt="デジタルイラスト作品 4"></div>
+                                        <div class="gallery__item" data-category="digital"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/Digital-Illustration-Course/Digital-Illustration-Course5.jpeg"
+                                                        alt="デジタルイラスト作品 5"></div>
+                                        <div class="gallery__item" data-category="digital"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/Digital-Illustration-Course/Digital-Illustration-Course6.png"
+                                                        alt="デジタルイラスト作品 6"></div>
+                                        <div class="gallery__item" data-category="digital"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/Digital-Illustration-Course/Digital-Illustration-Course7.png"
+                                                        alt="デジタルイラスト作品 7"></div>
+                                        <div class="gallery__item" data-category="digital"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/Digital-Illustration-Course/Digital-Illustration-Course8.jpeg"
+                                                        alt="デジタルイラスト作品 8"></div>
+                                        <div class="gallery__item" data-category="digital"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/Digital-Illustration-Course/Digital-Illustration-Course9.jpeg"
+                                                        alt="デジタルイラスト作品 9"></div>
+                                        <div class="gallery__item" data-category="digital"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/Digital-Illustration-Course/Digital-Illustration-Course10.jpeg"
+                                                        alt="デジタルイラスト作品 10"></div>
+                                        <div class="gallery__item" data-category="digital"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/Digital-Illustration-Course/Digital-Illustration-Course11.jpeg"
+                                                        alt="デジタルイラスト作品 11"></div>
+
+                                        <!-- iPad (ipad): 7 items -->
+                                        <div class="gallery__item" data-category="ipad"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/iPad-Course/iPad-Course1.png"
+                                                        alt="iPad作品 1"></div>
+                                        <div class="gallery__item" data-category="ipad"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/iPad-Course/iPad-Course2.jpeg"
+                                                        alt="iPad作品 2"></div>
+                                        <div class="gallery__item" data-category="ipad"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/iPad-Course/iPad-Course3.jpeg"
+                                                        alt="iPad作品 3"></div>
+                                        <div class="gallery__item" data-category="ipad"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/iPad-Course/iPad-Course4.jpeg"
+                                                        alt="iPad作品 4"></div>
+                                        <div class="gallery__item" data-category="ipad"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/iPad-Course/iPad-Course5.jpeg"
+                                                        alt="iPad作品 5"></div>
+                                        <div class="gallery__item" data-category="ipad"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/iPad-Course/iPad-Course6.jpeg"
+                                                        alt="iPad作品 6"></div>
+                                        <div class="gallery__item" data-category="ipad"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/iPad-Course/iPad-Course7.jpeg"
+                                                        alt="iPad作品 7"></div>
+
+                                        <!-- 大人アクリル (acrylic): 2 items -->
+                                        <div class="gallery__item" data-category="acrylic"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/Adult-Acrylic-Painting-Course/Adult-Acrylic-Painting-Course1.jpeg"
+                                                        alt="大人アクリル作品 1"></div>
+                                        <div class="gallery__item" data-category="acrylic"><img loading="lazy"
+                                                        class="lazy-load"
+                                                        src="./assets/images/gallery/Adult-Acrylic-Painting-Course/Adult-Acrylic-Painting-Course2.jpeg"
+                                                        alt="大人アクリル作品 2"></div>
+                                </div>
+                        </div>
+                </section>
+        </main>
+
+        <!-- Image Modal -->
+        <div class="modal" id="imageModal">
+                <span class="modal__close">&times;</span>
+                <img class="modal__content" id="modalImg">
+        </div>
+
+        <!-- Back to Top Button -->
+        <a href="#top" class="back-to-top" aria-label="Top"></a>
+
+        <!-- Footer -->
+        <footer class="footer">
+                <div class="section__container">
+                        <p class="footer__copyright">&copy; 2025 ART LAB PAON. All Rights Reserved.</p>
+                </div>
+        </footer>
+
+        <script src="./assets/js/main.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Loader
+    const loader = document.getElementById('loader');
+    if (loader) {
+        window.addEventListener('load', () => {
+            // Add a small delay for better visual experience
+            setTimeout(() => {
+                loader.classList.add('loaded');
+            }, 800);
+        });
+    }
+
+    // Lazy Load Image Fade-in
+    const lazyImages = document.querySelectorAll('.lazy-load');
+    lazyImages.forEach(img => {
+        if (img.complete) {
+            img.classList.add('is-loaded');
+        } else {
+            img.addEventListener('load', () => {
+                img.classList.add('is-loaded');
+            });
+        }
+    });
+
     // Mobile Menu Toggle
     const menuBtn = document.querySelector('.header__menu-btn');
     const nav = document.querySelector('.header__nav');
@@ -67,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
                         item.classList.remove('hide');
                         // Reset animation slightly to re-trigger if needed, or simply show
-                        item.style.opacity = '1'; 
+                        item.style.opacity = '1';
                         item.style.transform = 'scale(1)';
                     } else {
                         item.classList.add('hide');
@@ -103,6 +126,18 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('click', (e) => {
             if (e.target === modal) {
                 modal.style.display = 'none';
+            }
+        });
+    }
+
+    // Back to Top Button
+    const backToTopBtn = document.querySelector('.back-to-top');
+    if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('is-active');
+            } else {
+                backToTopBtn.classList.remove('is-active');
             }
         });
     }
