@@ -230,18 +230,46 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section contact">
+    <section id="contact" class="section contact-section">
       <div class="section__container">
-        <div class="contact__box">
-          <h2 class="contact__title">CONTACT</h2>
-          <p class="contact__text">
-            体験レッスンのお申し込み、講座に関するご質問は<br>
-            InstagramのDM（ダイレクトメッセージ）よりお気軽にお問い合わせください。
-          </p>
-          <a href="https://www.instagram.com/art_lab_paon/" target="_blank" rel="noopener noreferrer"
-            class="btn btn--white">
-            Instagramから問い合わせる
-          </a>
+        <h2 class="section__title section__title--center">CONTACT<span class="section__title-ja">お問い合わせ</span></h2>
+        
+        <div class="contact-form__wrapper">
+          <form name="contact" method="POST" data-netlify="true" action="/thanks.html" class="contact-form">
+            <div class="contact-form__item">
+              <label for="name" class="contact-form__label">氏名</label>
+              <input type="text" id="name" name="name" placeholder="お名前をご記入ください" required class="contact-form__input">
+            </div>
+            
+            <div class="contact-form__item">
+              <label for="email" class="contact-form__label">メールアドレス</label>
+              <input type="email" id="email" name="email" placeholder="example@mail.com" required class="contact-form__input">
+            </div>
+            
+            <div class="contact-form__item">
+              <label for="category" class="contact-form__label">お問い合わせ項目</label>
+              <select id="category" name="category" required class="contact-form__select">
+                <option value="" disabled selected>項目を選択してください</option>
+                <option value="入会・体験について">入会・体験について</option>
+                <option value="絵画購入について">絵画購入について</option>
+                <option value="絵画の依頼について">絵画の依頼について</option>
+                <option value="イベント等への出演依頼">イベント等への出演依頼</option>
+                <option value="その他">その他</option>
+              </select>
+            </div>
+            
+            <div class="contact-form__item">
+              <label for="message" class="contact-form__label">内容</label>
+              <textarea id="message" name="message" rows="6" placeholder="お問い合わせ内容をご記入ください" required class="contact-form__textarea"></textarea>
+            </div>
+            
+            <div class="contact-form__footer">
+              <p class="contact-form__note">
+                ※送信前にご入力内容を再度ご確認ください。自動返信機能はございませんので、控えが必要な場合は送信前にこの画面をスクリーンショット等で保存してください。
+              </p>
+              <button type="submit" class="btn btn--primary btn--large w-100">送信する</button>
+            </div>
+          </form>
         </div>
       </div>
     </section>
