@@ -453,6 +453,8 @@ img {
   border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
 }
 
 .course__card:hover {
@@ -487,6 +489,40 @@ img {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--color-secondary);
+  text-align: right;
+  margin-top: auto;
+}
+
+.course__schedule {
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+  background: var(--color-bg-alt);
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.course__schedule-item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 5px;
+  border-bottom: 1px dashed var(--color-border);
+  padding-bottom: 5px;
+}
+
+.course__schedule-item:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.course__schedule-day {
+  font-weight: 700;
+  color: var(--color-text);
+  flex-shrink: 0;
+}
+
+.course__schedule-time {
+  flex: 1;
   text-align: right;
 }
 
@@ -636,8 +672,35 @@ img {
 .footer {
   background-color: #2f3542;
   color: #fff;
-  padding: 30px 20px;
+  padding: 40px 20px;
   text-align: center;
+}
+
+.footer__sns {
+  margin-bottom: 25px;
+}
+
+.footer__sns-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all 0.3s;
+}
+
+.footer__sns-link:hover {
+  background: var(--color-primary);
+  color: #000;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+.footer__sns-link i {
+  font-size: 1.2rem;
 }
 
 .footer__copyright {
