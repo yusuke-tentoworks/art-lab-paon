@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/webp" href="./assets/images/favicon.webp" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 Page Not Found | ART LAB PAON（アートラボパオン）</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <style>
+    .error-section {
+      padding: 160px 20px 100px;
+      text-align: center;
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .error__code {
+      font-family: var(--font-heading);
+      font-size: 8rem;
+      font-weight: 900;
+      color: var(--color-primary);
+      line-height: 1;
+      margin-bottom: 20px;
+      text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .error__title {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .error__text {
+      margin-bottom: 40px;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      .error__code {
+        font-size: 5rem;
+      }
+      .error__title {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header__container">
+      <a href="index.html" class="header__logo">
+        <img src="./assets/images/logo_paon_v2.webp" alt="ART LAB PAON Logo" class="header__logo-img">
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="error-section">
+      <div class="section__container">
+        <div class="error__code">404</div>
+        <h1 class="error__title">PAGE NOT FOUND</h1>
+        <p class="error__text">
+          お探しのページは見つかりませんでした。<br>
+          一時的にアクセスできないか、移動または削除された可能性があります。
+        </p>
+        <a href="index.html" class="btn btn--primary btn--large">トップページへ戻る</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__container">
+      <p class="footer__copyright">&copy; 2025 ART LAB PAON. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

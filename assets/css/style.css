@@ -708,6 +708,24 @@ img {
   opacity: 0.7;
 }
 
+.footer__links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 0.85rem;
+}
+
+.footer__link {
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.footer__link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
 /* Access */
 /* =========================================
    LOADER STYLES
@@ -862,7 +880,7 @@ img {
 
 /* Gallery Section */
 .gallery {
-  padding: 120px 20px 60px;
+  padding: 160px 20px 60px;
   /* Top padding for fixed header */
   min-height: 80vh;
 }

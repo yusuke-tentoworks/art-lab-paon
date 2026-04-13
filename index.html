@@ -114,7 +114,7 @@
       <div class="section__container">
         <div class="concept__grid">
           <div class="concept__image js-fade-up">
-            <img src="./assets/images/concept_art_color.webp" alt="ART LAB PAONの象をモチーフにしたアートワーク">
+            <img src="./assets/images/concept_art_color.webp" alt="ART LAB PAONの象をモチーフにしたアートワーク" loading="lazy">
           </div>
           <div class="concept__text js-fade-up">
             <h2 class="section__title">CONCEPT<span class="section__title-ja">PAONについて</span></h2>
@@ -214,7 +214,7 @@
         <h2 class="section__title section__title--center">INSTRUCTOR<span class="section__title-ja">講師紹介</span></h2>
         <div class="instructor__content js-fade-up">
           <div class="instructor__image-wrapper">
-            <img src="./assets/images/instructor_portrait_mono.webp" alt="中川 一也" class="instructor__image">
+            <img src="./assets/images/instructor_portrait_mono.webp" alt="中川 一也" class="instructor__image" loading="lazy">
           </div>
           <div class="instructor__info">
             <h3 class="instructor__name">中川 一也 <span class="instructor__name-en">Kazuya Nakagawa</span></h3>
@@ -294,9 +294,11 @@
 
             <div class="contact-form__footer">
               <p class="contact-form__note">
-                ※送信前にご入力内容を再度ご確認ください。自動返信機能はございませんので、控えが必要な場合は送信前にこの画面をスクリーンショット等で保存してください。
+                ※送信前に<a href="privacy.html" target="_blank"
+                  style="text-decoration: underline; color: var(--color-secondary);">プライバシーポリシー</a>をご確認ください。ご入力いただいた情報は、お問い合わせへの回答および当教室からのご連絡目的のみに使用いたします。<br>
+                ※自動返信機能はございませんので、控えが必要な場合は送信前にこの画面を保存してください。
               </p>
-              <button type="submit" class="btn btn--primary btn--large w-100">送信する</button>
+              <button type="submit" class="btn btn--primary btn--large w-100">同意して送信する</button>
             </div>
           </form>
         </div>
@@ -311,6 +313,9 @@
           class="footer__sns-link">
           <i class="icon-instagram"></i> ART LAB PAON 公式Instagram
         </a>
+      </div>
+      <div class="footer__links">
+        <a href="privacy.html" class="footer__link">プライバシーポリシー</a>
       </div>
       <p class="footer__copyright">&copy; 2025 ART LAB PAON. All Rights Reserved.</p>
     </div>
