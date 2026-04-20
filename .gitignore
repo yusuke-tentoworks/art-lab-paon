@@ -50,6 +50,13 @@ Thumbs.db
 *.sw?
 *.code-workspace
 
+# Python 補助ツール (Python Utility Tools)
+*.py
+*.pyc
+__pycache__/
+.venv/
+.pytest_cache/
+
 # ログファイル (Logs)
 logs
 *.log

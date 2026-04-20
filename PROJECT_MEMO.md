@@ -19,7 +19,6 @@
 
 | サービス名 | 連携目的 | ステータス | 備考 |
 | :--- | :--- | :--- | :--- |
-| Google Analytics (GA4) | アクセス解析 | 未着手 | 要コード追加 |
 | Google Search Console | SEO管理 | 設定済み | google-site-verification あり |
 | XMLサイトマップ | 検索エンジン通知 | 設置済み | sitemap.xml 存在 |
 | OGP / SNS連携 | SNSシェア対策 | 設定済み | 基本タグ、画像WebP設定済み |
