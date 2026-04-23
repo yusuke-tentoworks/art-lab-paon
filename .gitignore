@@ -71,3 +71,5 @@ coverage/
 
 # その他 (Others)
 .aiignore
+assets/.DS_Store
+.DS_Store
