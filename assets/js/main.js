@@ -1,9 +1,63 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Component Loader
+    function loadComponents() {
+        const headerPlaceholder = document.getElementById('header-placeholder');
+        const footerPlaceholder = document.getElementById('footer-placeholder');
+
+        if (headerPlaceholder && typeof COMPONENTS !== 'undefined') {
+            headerPlaceholder.innerHTML = COMPONENTS.header;
+            initHeader();
+        }
+
+        if (footerPlaceholder && typeof COMPONENTS !== 'undefined') {
+            footerPlaceholder.innerHTML = COMPONENTS.footer;
+        }
+    }
+
+    // Initialize Header Logic (Mobile Menu, etc.)
+    function initHeader() {
+        const menuBtn = document.querySelector('.header__menu-btn');
+        const nav = document.querySelector('.header__nav');
+
+        if (menuBtn && nav) {
+            menuBtn.addEventListener('click', () => {
+                nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+                menuBtn.classList.toggle('is-active');
+            });
+        }
+
+        // Smooth Scroll for Anchor Links (re-apply to dynamically loaded links)
+        document.querySelectorAll('a[href*="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                const url = new URL(this.href);
+                
+                // Only intercept if the link is on the same page
+                if (url.pathname === window.location.pathname || url.pathname.endsWith('/' + window.location.pathname.split('/').pop()) || href.startsWith('#')) {
+                    const targetId = url.hash.slice(1);
+                    const target = document.getElementById(targetId);
+                    
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+
+                        // Close menu on mobile click
+                        if (window.innerWidth <= 768) {
+                            nav.style.display = 'none';
+                            menuBtn.classList.remove('is-active');
+                        }
+                    }
+                }
+            });
+        });
+    }
+
     // Loader
     const loader = document.getElementById('loader');
     if (loader) {
         window.addEventListener('load', () => {
-            // Add a small delay for better visual experience
             setTimeout(() => {
                 loader.classList.add('loaded');
             }, 800);
@@ -22,40 +76,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Mobile Menu Toggle
-    const menuBtn = document.querySelector('.header__menu-btn');
-    const nav = document.querySelector('.header__nav');
-
-    if (menuBtn && nav) {
-        menuBtn.addEventListener('click', () => {
-            nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
-            menuBtn.classList.toggle('is-active');
-        });
-    }
-
-    // Smooth Scroll for Anchor Links (Optional if css not supported)
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-
-                // Close menu on mobile click
-                if (window.innerWidth <= 768) {
-                    nav.style.display = 'none';
-                    menuBtn.classList.remove('is-active');
-                }
-            }
-        });
-    });
-
     // Scroll Animation Observer
     const observerOptions = {
         root: null,
-        rootMargin: '0px 0px -100px 0px', // Trigger a bit before the element is fully in view
+        rootMargin: '0px 0px -100px 0px',
         threshold: 0.1
     };
 
@@ -63,12 +87,11 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('is-active');
-                observer.unobserve(entry.target); // Only animate once
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    // Target elements
     const fadeElements = document.querySelectorAll('.js-fade-up, .js-fade-up-stagger');
     fadeElements.forEach(el => observer.observe(el));
 
@@ -79,9 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (filterBtns.length > 0) {
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                // Remove active class from all buttons
                 filterBtns.forEach(b => b.classList.remove('active'));
-                // Add active class to clicked button
                 btn.classList.add('active');
 
                 const filterValue = btn.getAttribute('data-filter');
@@ -89,7 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 galleryItems.forEach(item => {
                     if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
                         item.classList.remove('hide');
-                        // Reset animation slightly to re-trigger if needed, or simply show
                         item.style.opacity = '1';
                         item.style.transform = 'scale(1)';
                     } else {
@@ -122,7 +142,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // Close on outside click
         window.addEventListener('click', (e) => {
             if (e.target === modal) {
                 modal.style.display = 'none';
@@ -141,4 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Run loader
+    loadComponents();
 });
