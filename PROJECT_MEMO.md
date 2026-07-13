@@ -53,18 +53,17 @@
 
 ---
 
----
-
-## 7. ガイドライン遵守状況 (公開前必須)
+## 6. ガイドライン遵守状況 (公開前必須)
 各ガイドラインのチェックを済ませたか管理します。
+（スラッシュコマンド `/security-audit` `/seo-check` `/legal-check` `/qa-check` でチェックを実行できます）
 
-- [x] **[セキュリティ](01_security_guidelines.md)**: パスワード隠匿、WAF、常時SSL
-- [x] **[SEO・パフォーマンス](02_seo_performance_guidelines.md)**: メタタグ、サイトマップ、OGP、画像最適化（Altタグ強化、タイトル最適化、構造化データ拡充済み）
-- [x] **[コーディング・管理](03_coding_management_guidelines.md)**: フォルダ構成、命名規則、共通パーツ化（ヘッダー・フッターの共通化完了）
-- [x] **[運用・法務](04_operation_legal_guidelines.md)**: プライバシーポリシー作成、フッターリンク追加、特商法（確認中）
-- [x] **[品質保証(QA)](05_quality_assurance_guidelines.md)**: 表示崩れ、リンク、フォーム動作（プライバシー同意追加）、404ページ作成
+- [x] **セキュリティ (`tentoworks-dev-rules/ai-coding-guidelines/01_security_guidelines.md`)**: パスワード隠匿、WAF、常時SSL
+- [x] **SEO・パフォーマンス (`tentoworks-dev-rules/ai-coding-guidelines/02_seo_performance_guidelines.md`)**: メタタグ、サイトマップ、OGP、画像最適化（Altタグ強化、タイトル最適化、構造化データ拡充済み）
+- [x] **コーディング・管理 (`tentoworks-dev-rules/ai-coding-guidelines/03_coding_management_guidelines.md`)**: フォルダ構成、命名規則、共通パーツ化（ヘッダー・フッターの共通化完了）
+- [x] **運用・法務 (`tentoworks-dev-rules/ai-coding-guidelines/04_operation_legal_guidelines.md`)**: プライバシーポリシー作成、フッターリンク追加、特商法（確認中）
+- [x] **品質保証(QA) (`tentoworks-dev-rules/ai-coding-guidelines/05_quality_assurance_guidelines.md`)**: 表示崩れ、リンク、フォーム動作（プライバシー同意追加）、404ページ作成
 
 ---
 
-## 8. その他メモ / 共有事項
+## 7. その他メモ / 共有事項
 - 2026-04-14: プロジェクト管理メモを新規作成。ガイドラインに基づく改善タスクを開始。

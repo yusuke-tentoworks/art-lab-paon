@@ -73,3 +73,7 @@ coverage/
 .aiignore
 assets/.DS_Store
 .DS_Store
+
+# Claude Code のローカル設定（個人環境依存のもの）
+.claude/settings.local.json
+secrets/
