@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Gallery Preview: pick a random image per category on each page load
     const GALLERY_PREVIEW_IMAGES = {
-        'Artistic-Painting-Course': [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13],
-        'Digital-Illustration-Course': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        'Artistic-Painting-Course': [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+        'Digital-Illustration-Course': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25],
         'iPad-Course': [1, 2, 3, 4, 5, 6, 7],
-        'Adult-Acrylic-Painting-Course': [1, 2]
+        'Adult-Acrylic-Painting-Course': [1, 2, 3]
     };
 
     document.querySelectorAll('.gallery-preview__item img[data-gallery-category]').forEach(img => {
