@@ -1,4 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Gallery Preview: pick a random image per category on each page load
+    const GALLERY_PREVIEW_IMAGES = {
+        'Artistic-Painting-Course': [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13],
+        'Digital-Illustration-Course': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        'iPad-Course': [1, 2, 3, 4, 5, 6, 7],
+        'Adult-Acrylic-Painting-Course': [1, 2]
+    };
+
+    document.querySelectorAll('.gallery-preview__item img[data-gallery-category]').forEach(img => {
+        const category = img.dataset.galleryCategory;
+        const numbers = GALLERY_PREVIEW_IMAGES[category];
+        if (numbers && numbers.length) {
+            const n = numbers[Math.floor(Math.random() * numbers.length)];
+            img.src = `./assets/images/gallery/${category}/${category}${n}.webp`;
+        }
+    });
+
     // Component Loader
     function loadComponents() {
         const headerPlaceholder = document.getElementById('header-placeholder');
