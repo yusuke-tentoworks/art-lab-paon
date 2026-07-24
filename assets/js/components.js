@@ -11,6 +11,7 @@ const COMPONENTS = {
       <li><a href="index.html#instructor">Instructor</a></li>
       <li><a href="index.html#access">Access</a></li>
       <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="https://nakakazu.base.shop/" target="_blank" rel="noopener noreferrer">Shop</a></li>
       <li><a href="index.html#contact" class="btn btn--primary">体験レッスン</a></li>
     </ul>
   </nav>
@@ -29,6 +30,7 @@ const COMPONENTS = {
     </a>
   </div>
   <div class="footer__links">
+    <a href="https://nakakazu.base.shop/" target="_blank" rel="noopener noreferrer" class="footer__link">ONLINE SHOP</a>
     <a href="privacy.html" class="footer__link">プライバシーポリシー</a>
   </div>
   <p class="footer__copyright">&copy; 2025 ART LAB PAON. All Rights Reserved.</p>

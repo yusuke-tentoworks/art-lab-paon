@@ -663,6 +663,26 @@ img {
   }
 }
 
+/* Shop */
+.shop {
+  background-color: var(--color-bg-alt);
+}
+
+.shop__content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  background: #fff;
+  padding: 50px 40px;
+  border-radius: 20px;
+  border: 1px solid var(--color-border);
+}
+
+.shop__desc {
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
 /* Contact */
 .contact-section {
   background-color: var(--color-bg-alt);
